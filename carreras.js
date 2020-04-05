@@ -1,5 +1,5 @@
 module.exports = [
-  { id: 1, nombre: "Ing. Sistemes Computacionales" },
-  { id: 2, nombre: "Ing. Informatica" },
-  { id: 3, nombre: "Arquitectura" },
+  { nombre: "Ing. Sistemes Computacionales" },
+  { nombre: "Ing. Informatica" },
+  { nombre: "Arquitectura" },
 ];

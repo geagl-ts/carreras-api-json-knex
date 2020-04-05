@@ -37,4 +37,16 @@ describe("CRUD carreras", () => {
     expect(response.body).to.be.a("Object");
     expect(response.body).to.deep.equal(fixtures.carreras[0]);
   });
+
+  it("Creates A Carrera", async () => {
+    const response = await request(app)
+      .post("/api/v1/carreras")
+      .send(fixtures.carrera)
+      .set("Accept", "application/json")
+      .expect("Content-Type", /json/)
+      .expect(200);
+
+    fixtures.carrera.id = response.body.id;
+    expect(response.body).to.deep.equal(fixtures.carrera);
+  });
 });

@@ -6,5 +6,5 @@ exports.up = function (knex) {
 };
 
 exports.down = function (knex) {
-  return knex.dropTable("carreras");
+  return knex.schema.dropTable("carreras");
 };

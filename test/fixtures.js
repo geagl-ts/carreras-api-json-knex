@@ -4,6 +4,11 @@ const carreras = [
   { id: 3, nombre: "Arquitectura" },
 ];
 
+const carrera = {
+  nombre: "Ing. Electrica",
+};
+
 module.exports = {
   carreras,
+  carrera,
 };
