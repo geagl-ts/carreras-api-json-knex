@@ -26,4 +26,15 @@ describe("CRUD carreras", () => {
     expect(response.body).to.be.a("Array");
     expect(response.body).to.deep.equal(fixtures.carreras);
   });
+
+  it("Show One Record By Id", async () => {
+    const response = await request(app)
+      .get("/api/v1/carreras/1")
+      .set("Accept", "application/json")
+      .expect("Content-Type", /json/)
+      .expect(200);
+
+    expect(response.body).to.be.a("Object");
+    expect(response.body).to.deep.equal(fixtures.carreras[0]);
+  });
 });

@@ -1,6 +1,7 @@
 exports.up = function (knex) {
   return knex.schema.createTable("carreras", (table) => {
-    table.increments(), table.text("nombre");
+    table.increments();
+    table.text("nombre");
   });
 };
 
