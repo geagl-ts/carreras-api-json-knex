@@ -5,4 +5,8 @@ module.exports = {
     client: "pg",
     connection: "postgres://localhost/carreras-iti",
   },
+  test: {
+    client: "pg",
+    connection: "postgres://localhost/test-carreras-iti",
+  },
 };
