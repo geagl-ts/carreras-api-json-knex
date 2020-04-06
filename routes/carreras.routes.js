@@ -38,4 +38,20 @@ router.post("/", async (req, res, next) => {
   }
 });
 
+router.put("/:id", isValidId, async (req, res, next) => {
+  if (validCarrera(req.body)) {
+    //actualiza la carrera
+    const carrera = await queries.update(req.params.id, req.body);
+    res.json(carrera[0]);
+  } else {
+    next(new Error("Invalid Carrera"));
+  }
+});
+
+router.delete("/:id", isValidId, async (req, res, next) => {
+  //eliminar la carrera
+  await queries.delete(req.params.id);
+  res.json({ deleted: true });
+});
+
 module.exports = router;
